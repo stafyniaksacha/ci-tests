@@ -7,6 +7,7 @@ add one of theses labels to be used to generate changelog
 - `:bug-fix`
 - `:optimisation`
 - `:tests`
+- `:refactor`
 - `:continuous-integration`
 
 describe your changes here
