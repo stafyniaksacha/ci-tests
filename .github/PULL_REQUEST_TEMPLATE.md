@@ -6,6 +6,8 @@ add one of theses labels to be used to generate changelog
 - `:enhancement`
 - `:bug-fix`
 - `:optimisation`
+- `:tests`
+- `:continuous-integration`
 
 describe your changes here
 
@@ -15,5 +17,5 @@ describe your changes here
 - resolve organisation/repository#23
 
 ## Documentation
-in case of creating a PR with `:breaking-changes` or `:enhancement` tag, you should rely with the associated PR that document this change
+in case of creating a PR with `:breaking-changes` or `:enhancement` tag, you should rely with the associated PR that relate this change
 - oranisation/documentation#21
