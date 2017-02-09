@@ -15,13 +15,13 @@ describe your bug here
 describe step by step bug reproduction here
 
 
-## How to create a feature request
+## How to create a feature request ?
 - Before start ensure that the feature that you need is not present in the [ROADMAP](../ROADMAP.md)
 - Add the `feature-request` label on this issue
 
 describe the feature request and why you need it here
 
 
-## How to start a discution
+## How to start a discution ?
 - The best way to communicate with the team is to join us in our [gitter](http://gitter.im/kuzzleio/kuzzle)
 - If you need help, you can create a discution on [stackoverflow](http://stackoverflow.com/questions/ask)
