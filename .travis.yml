@@ -22,6 +22,8 @@ deploy:
     api_key:
       secure: "jIv2wf+4tvMPDoQiGJ0JWTmPtPNhXVqqXRE9EkTRKlLzpnz9DpeUQUSuYYNcnow0S5ET4LbWsRjaBcrihreXGdulpiO44NgD7H4HegQD8nQHWj/VpJy3CkEbVmIvEUg2azTtyb4V1VWseLkqn90UqTuozvLdFueVRWAmaxi062jFTkDOGqkwm5a7EoxplFqRi8VK+Up7urLsfIBbnrul72SCvJQljSnNIE3X9+XlozbG4EpKdFOfOijUu4BykNmlnDvx2jR60Rl/hPjs3j5fYI4KIrI44cU2l1sTwqXKXBCntzX3wdx/0TyQ8ddTpTXW763ms3PU9rXu4zjusEPCxJGkwzuEtWGkVGLa/h0n2Ih01PyO6av10YX4D5q6JY2HWxLN7STDYH489ZDlo+X8YR76CAnjNIY2Khx7a1d9eX2Ihisij7jZNK4BPwyAh0B2XPSVxKw6/2VVTccncJY/FZIlYehvEdtmEyN3vVhNnJceoRFQ365HgYIYiDFmQN5QtKsuEh4kvCTv4Qfk3RBPxUcZSA6kGzHzG3zYrnjwy3pmVU0fJF+psD+WMefrL1EK5fUhQTHXHrNjZ19zoXaxeReuAalbM3Vf03oqzcdO3Ct8SBETAIrutpHe/bFPGDGURgWZji+A2ztisa0mlHOHim/AKbyogwx9e6vjPbBkx/o="
     on:
-      branch: /[0-9]+\.[0-9]+\.[0-9]+/
+      branch:
+        - master
+        - /[0-9]+\.[0-9]+\.[0-9]+/
       node: "6.1"
-#      condition: $MY_ENV = super_awesome
+      #condition: $MY_ENV = super_awesome
