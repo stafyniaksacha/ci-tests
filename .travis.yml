@@ -14,15 +14,14 @@ node_js:
 - '6.1'
 script: npm test && npm run coverage
 deploy:
-  matrix:
-  - provider: npm
-    email: sacha.st@live.fr
-    api_key:
-      secure: jIv2wf+4tvMPDoQiGJ0JWTmPtPNhXVqqXRE9EkTRKlLzpnz9DpeUQUSuYYNcnow0S5ET4LbWsRjaBcrihreXGdulpiO44NgD7H4HegQD8nQHWj/VpJy3CkEbVmIvEUg2azTtyb4V1VWseLkqn90UqTuozvLdFueVRWAmaxi062jFTkDOGqkwm5a7EoxplFqRi8VK+Up7urLsfIBbnrul72SCvJQljSnNIE3X9+XlozbG4EpKdFOfOijUu4BykNmlnDvx2jR60Rl/hPjs3j5fYI4KIrI44cU2l1sTwqXKXBCntzX3wdx/0TyQ8ddTpTXW763ms3PU9rXu4zjusEPCxJGkwzuEtWGkVGLa/h0n2Ih01PyO6av10YX4D5q6JY2HWxLN7STDYH489ZDlo+X8YR76CAnjNIY2Khx7a1d9eX2Ihisij7jZNK4BPwyAh0B2XPSVxKw6/2VVTccncJY/FZIlYehvEdtmEyN3vVhNnJceoRFQ365HgYIYiDFmQN5QtKsuEh4kvCTv4Qfk3RBPxUcZSA6kGzHzG3zYrnjwy3pmVU0fJF+psD+WMefrL1EK5fUhQTHXHrNjZ19zoXaxeReuAalbM3Vf03oqzcdO3Ct8SBETAIrutpHe/bFPGDGURgWZji+A2ztisa0mlHOHim/AKbyogwx9e6vjPbBkx/o=
-    on:
-      branch:
-      - master
-      - "/[0-9]+\\.[0-9]+\\.[0-9]+/"
-      node: '6.1'
+- provider: npm
+  email: sacha.st@live.fr
   api_key:
-    secure: fH5Sw9Y25WiyXJ+rrnFT/03F9Rvmlhag/nVSx/kZYWwHggZljP9d1IfKGZLURSOY9FeQ0iUp6WTv/QCABQMd2XL74NbzWjLcUkREkEYSpLC0Pu8QVFt3G+oKK6Eb4MyFAFY7mp46uyGMhKuqQgdXNnc12VZPJOztxT7caXfCKpdKj9jXpkmAQsWrabxmlTu0A1clNw7R6heFOdwX1JFutXP3+ChWFIvhUu90AeO12w/kuEf/LdRFqGuaGjmBc/NFfL6dIHN81+EAuabvyOveow32B5k55WL9TYbZ1zwDdNJQyZscPPVCs4WKuABjeRMx+KP04XGVsg2Z5qfkIfbRWXbx5m5u9HZYNxzfyUjmtKgFrTZ3iKQY5DgsUkrXaahN1hlh2rCY6h9093yzk0qbSFfU8mDq0eREWeD25pR/ETC0rkQSHtg5cvHs5iPodsLPZnm6+8UgAQFfaK4SH6Ehxtvh2cjhGhsev167Vq9OXTXxcLF/VbHmHDXTkotdapFKGl48rX4SWStgrIBl38uo5B2wBz/PI3G5AqMvC8Xw6/+UziNwuY9mD/s/GLn35qgajLUSZs9vaebga/UFWFB4HLDl7ck7ml6sw3KNG9X1lQ3CDscdwwgWYGVRPi2HnwazvDyoTgEoQpzomU503YmjmH0tvvYWL19sJ8c4MF15In4=
+    secure: jIv2wf+4tvMPDoQiGJ0JWTmPtPNhXVqqXRE9EkTRKlLzpnz9DpeUQUSuYYNcnow0S5ET4LbWsRjaBcrihreXGdulpiO44NgD7H4HegQD8nQHWj/VpJy3CkEbVmIvEUg2azTtyb4V1VWseLkqn90UqTuozvLdFueVRWAmaxi062jFTkDOGqkwm5a7EoxplFqRi8VK+Up7urLsfIBbnrul72SCvJQljSnNIE3X9+XlozbG4EpKdFOfOijUu4BykNmlnDvx2jR60Rl/hPjs3j5fYI4KIrI44cU2l1sTwqXKXBCntzX3wdx/0TyQ8ddTpTXW763ms3PU9rXu4zjusEPCxJGkwzuEtWGkVGLa/h0n2Ih01PyO6av10YX4D5q6JY2HWxLN7STDYH489ZDlo+X8YR76CAnjNIY2Khx7a1d9eX2Ihisij7jZNK4BPwyAh0B2XPSVxKw6/2VVTccncJY/FZIlYehvEdtmEyN3vVhNnJceoRFQ365HgYIYiDFmQN5QtKsuEh4kvCTv4Qfk3RBPxUcZSA6kGzHzG3zYrnjwy3pmVU0fJF+psD+WMefrL1EK5fUhQTHXHrNjZ19zoXaxeReuAalbM3Vf03oqzcdO3Ct8SBETAIrutpHe/bFPGDGURgWZji+A2ztisa0mlHOHim/AKbyogwx9e6vjPbBkx/o=
+  on:
+    branch:
+    - master
+    - "/[0-9]+\\.[0-9]+\\.[0-9]+/"
+    node: '6.1'
+api_key:
+  secure: fH5Sw9Y25WiyXJ+rrnFT/03F9Rvmlhag/nVSx/kZYWwHggZljP9d1IfKGZLURSOY9FeQ0iUp6WTv/QCABQMd2XL74NbzWjLcUkREkEYSpLC0Pu8QVFt3G+oKK6Eb4MyFAFY7mp46uyGMhKuqQgdXNnc12VZPJOztxT7caXfCKpdKj9jXpkmAQsWrabxmlTu0A1clNw7R6heFOdwX1JFutXP3+ChWFIvhUu90AeO12w/kuEf/LdRFqGuaGjmBc/NFfL6dIHN81+EAuabvyOveow32B5k55WL9TYbZ1zwDdNJQyZscPPVCs4WKuABjeRMx+KP04XGVsg2Z5qfkIfbRWXbx5m5u9HZYNxzfyUjmtKgFrTZ3iKQY5DgsUkrXaahN1hlh2rCY6h9093yzk0qbSFfU8mDq0eREWeD25pR/ETC0rkQSHtg5cvHs5iPodsLPZnm6+8UgAQFfaK4SH6Ehxtvh2cjhGhsev167Vq9OXTXxcLF/VbHmHDXTkotdapFKGl48rX4SWStgrIBl38uo5B2wBz/PI3G5AqMvC8Xw6/+UziNwuY9mD/s/GLn35qgajLUSZs9vaebga/UFWFB4HLDl7ck7ml6sw3KNG9X1lQ3CDscdwwgWYGVRPi2HnwazvDyoTgEoQpzomU503YmjmH0tvvYWL19sJ8c4MF15In4=
