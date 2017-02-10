@@ -32,6 +32,12 @@ describe('Testing if values are primitive', () => {
     });
   });
 
+  describe('Symbol', () => {
+    it('should be considered as primitive value', () => {
+      should(isPrimitive(Symbol('foo'))).be.true();
+    });
+  });
+
   describe('Undefined', () => {
     it('should be considered as primitive value', () => {
       should(isPrimitive(undefined)).be.true();
