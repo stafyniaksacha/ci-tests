@@ -1,6 +1,6 @@
 {
   "name": "is-primitive",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0",
   "description": "test if a value is a javascript primitive type",
   "main": "src/index.js",
   "scripts": {
