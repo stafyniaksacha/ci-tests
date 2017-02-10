@@ -1,4 +1,4 @@
-# is-fully-primitive
+# is-really-primitive
 
 test if a value is primitive
 
