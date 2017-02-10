@@ -2,6 +2,7 @@
   "name": "is-realy-primitive",
   "version": "1.0.0",
   "description": "test if a value is a javascript primitive type",
+  "author": "Sacha STAFYNIAK",
   "main": "src/index.js",
   "scripts": {
     "test": "nyc --reporter=text-summary --reporter=lcov mocha",
@@ -9,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stafyniaksacha/is-primitive.git"
+    "url": "git+https://github.com/stafyniaksacha/is-realy-primitive.git"
   },
   "keywords": [
     "checking",
@@ -17,12 +18,11 @@
     "primitive",
     "scalar"
   ],
-  "author": "Sacha STAFYNIAK",
-  "license": "GPL-3.0",
+  "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/stafyniaksacha/is-primitive/issues"
+    "url": "https://github.com/stafyniaksacha/is-realy-primitive/issues"
   },
-  "homepage": "https://github.com/stafyniaksacha/is-primitive#readme",
+  "homepage": "https://github.com/stafyniaksacha/is-realy-primitive#readme",
   "dependencies": {},
   "devDependencies": {
     "codecov": "^1.0.1",
