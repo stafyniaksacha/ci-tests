@@ -1,5 +1,5 @@
 {
-  "name": "is-primitive",
+  "name": "is-realy-primitive",
   "version": "1.0.0",
   "description": "test if a value is a javascript primitive type",
   "main": "src/index.js",
