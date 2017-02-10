@@ -1,0 +1,35 @@
+{
+  "name": "is-primitive",
+  "version": "1.0.0-beta.0",
+  "description": "test if a value is a javascript primitive type",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nyc --reporter=text-summary --reporter=lcov mocha",
+    "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov > coverage/lcov.info && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stafyniaksacha/is-primitive.git"
+  },
+  "keywords": [
+    "checking",
+    "type",
+    "primitive",
+    "scalar"
+  ],
+  "author": "Sacha STAFYNIAK",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/stafyniaksacha/is-primitive/issues"
+  },
+  "homepage": "https://github.com/stafyniaksacha/is-primitive#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "codecov": "^1.0.1",
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2",
+    "should": "^11.2.0",
+    "should-sinon": "0.0.5",
+    "sinon": "^1.17.7"
+  }
+}
