@@ -5,11 +5,12 @@ function isPrimitive(value) {
       isNull(value) ||
       isBoolean(value) ||
       isNumber(value) ||
-      isString(value);
+      isString(value) ||
+      isSymbol(value);
 }
 
 function isNull(value) {
-  return 'object' === typeof value && null ===value;
+  return null === value;
 }
 
 function isUndefined(value) {
@@ -26,6 +27,10 @@ function isNumber(value) {
 
 function isString(value) {
   return 'string' === typeof value;
+}
+
+function isSymbol(value) {
+  return 'symbol' === typeof value;
 }
 
 module.exports = isPrimitive;
