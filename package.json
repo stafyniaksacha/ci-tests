@@ -1,5 +1,5 @@
 {
-  "name": "is-realy-primitive",
+  "name": "is-really-primitive",
   "version": "1.0.0",
   "description": "test if a value is a javascript primitive type",
   "author": "Sacha STAFYNIAK",
@@ -16,7 +16,8 @@
     "checking",
     "type",
     "primitive",
-    "scalar"
+    "scalar",
+    "wtf"
   ],
   "license": "WTFPL",
   "bugs": {
