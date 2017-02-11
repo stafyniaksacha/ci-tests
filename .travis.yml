@@ -8,11 +8,21 @@ matrix:
     sudo: required
   allow_failures:
   - dist: trusty
+
 language: node_js
 node_js:
 - '6'
 - '6.1'
-script: npm test && npm run coverage
+
+env:
+  GH_TOKEN:
+    secure: "nUTW6x6ICfU/SB92yJI+vvgjc4PVHjM4D8u7z2AOuwtaM1PUnwGPNfl4YgSfqkdtXk2hCDb1HZJINEblxOdEe5X/ibuMID47Wslj4hXsC397hYO/8kzLwjdekmfzTt7SSlttjrxvFg/R3F6ItvU3kA5pNySFckqSOL8YVsyhMo8xklxck2IR15I9umeVyIyePct2VzigKOHyUTz8Tivd3M516bAPkf5WtpJ71cPT2rpc9DEVO5tBdpb6aErH3/4GfEA4qhA/+202c7FmM3er4ZoBHI0EjK/mmdpmTIXA1Jc5/CD1engy8FjSiqw/OEDGxEaV6HRWOYf4kWwIS5jtuZ63voM8fuIDbgxPrrFXLAzHyJJ32rSdX2MQbgLGc3sVY7x8Dcn13Xu3QL+2dlDviPRNZnZ/zvQUzXS2+XbKRVm+r/UcgYLGU5BzAdr+kl2JzaCF7nNhS/7f1BJOxxhp0rV5p1L417FkkSJXSg/8TgQ30ohdfcv8vO+VLjjQMuEWjNSTN0wQZ3ctHd40xbfURl8pXQU6Cj1XDJ9MjSEBzJyeu5wSAxmFtYFsYs6dO/exAmScnl/tQXMX6OFtcP0jQwiR5PKez7eZruBIQjfQpyK0U67KeFAIVotD8FPeGkeD2xdROj3mBQTs3VyzB89iTgvmjezVJ0Jb9penN3BDTQQ="
+
+script:
+- npm test && npm run coverage
+
+before_deploy:
+- node bin/generate-changelog.js --changelog-file CHANGELOG.md --gh-token "$GH_TOKEN" --gh-token "$TRAVIS_REPO_SLUG"
 deploy:
 - provider: npm
   email: sacha.st@live.fr
@@ -23,3 +33,5 @@ deploy:
     - master
     - "/[0-9]+\\.[0-9]+\\.[0-9]+/"
     node: '6.1'
+after_deploy:
+- npm run tag
