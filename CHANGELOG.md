@@ -1,4 +1,4 @@
-### Release 1.2.1
+## Release 1.2.1
 ##### Enhancement
 - [ #17 ] Add changelog file - (resolve #15)
 
@@ -7,15 +7,18 @@
 
 - [ #13 ] Automatisation of tag creation when travis release package
 
-### Release 1.1.0
+---
+
+## Release 1.1.0
 ##### Enhancement
 - [ #11 ] Add ES6 symbol support - (resolve #10)
 
 ##### Bug fix
 - [ #11 ] Add ES6 symbol support - (resolve #10)
 
+---
 
-### Release 1.0.0
+## Release 1.0.0
 ##### Enhancement
 - [ #4 ] Export isPrimitive(value) function - (resolve #1)
 

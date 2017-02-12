@@ -142,7 +142,7 @@ function getPrInfos(prId, ghRepo, ghToken) {
 }
 
 function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
-  let labels = {};
+  let labels =
   let changelogLabels = {};
   let changelog = '';
 
@@ -178,9 +178,11 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
 
       changelogLabels[label] += `\n\n`;
     }
+
+    changelogLabels[label] += `---\n\n`;
   }
 
-  if (changelogLabels.length > 0) {
+  if (changes.length > 0) {
     changelog += `### Release ${futureTag}\n`
   }
 
