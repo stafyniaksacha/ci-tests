@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ev
 
+printenv
+
 for i in "$@"
 do
 case $i in
