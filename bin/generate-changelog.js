@@ -164,7 +164,7 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
       formatedLabel = label.charAt(0).toUpperCase() + label.slice(1);
     formatedLabel = formatedLabel.replace('-', ' ');
 
-    changelogLabels[label] = `### ${formatedLabel}\n`;
+    changelogLabels[label] = `##### ${formatedLabel}\n`;
 
     for (let change of labels[label]) {
 
@@ -180,8 +180,9 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
     }
   }
 
-
-  changelog += `## Release ${futureTag}\n`
+  if (changelogLabels.length > 0) {
+    changelog += `### Release ${futureTag}\n`
+  }
 
   for (let label of labelPriority) {
     if (changelogLabels.hasOwnProperty(label)) {
