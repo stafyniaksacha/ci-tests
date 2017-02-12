@@ -1,3 +1,14 @@
+### Release 1.2.4
+##### Enhancement
+- [ [#17](https://github.com/stafyniaksacha/is-really-primitive/pull/17) ] Add changelog file - ([resolve #15](https://github.com/stafyniaksacha/is-really-primitive/issue/15))
+
+##### Continuous integration
+- [ [#18](https://github.com/stafyniaksacha/is-really-primitive/pull/18) ] Ci automate changelog - ([resolve #16](https://github.com/stafyniaksacha/is-really-primitive/issue/16))
+
+- [ [#13](https://github.com/stafyniaksacha/is-really-primitive/pull/13) ] Automatisation of tag creation when travis release package
+
+---
+
 ## Release 1.1.0
 ##### Enhancement
 - [ [#11](https://github.com/stafyniaksacha/is-really-primitive/pull/11) ] Add ES6 symbol support - ([resolve #10](https://github.com/stafyniaksacha/is-really-primitive/issue/11))
