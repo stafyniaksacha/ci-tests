@@ -25,6 +25,7 @@ before_deploy:
 - node bin/generate-changelog.js --changelog-file CHANGELOG.md --gh-token "$GH_TOKEN" --gh-token "$TRAVIS_REPO_SLUG"
 deploy:
 - provider: npm
+  skip_cleanup: true
   email: sacha.st@live.fr
   api_key:
     secure: MLiTRrcPvHj8iHTPwFBPpDBIynP02cSaL1ESWZMkpL7yNAeVcyIwggivGxH0o+ir9AjALUg0IbVTJcCxswQhMywIgcFXC4SKhZKpzyyFt3pLQLBf/+sZWZNHBGlodAyMbq/ZlK9Uk6jcSPOtKMwdF47G3bBvdYDsmcyRjeJ4JUkSakuxvPAWETJhXvC1bDNt09TRfoQ/kyZa3zk1A1w2ZK4rEuVshMpHl4JI3bMsipQByK+n32s3+oJZ1W9P0Oqca+XZFPWJ0eCv9tbfwO5NgZSXQ3qTX//btNgHDHomrlgvEKFIHwTGBjAO4yqftkUKpMASQcY2NQwTcrJj5Lil1S/+7T9i760AjJ6FMwSGDWZ0CmmlNwBapJLNHXAalAaMDXc8UXxtM5DT4cH2uH1yM0WP0CAQnQhdgkOCy6b8a/QkI4/Qv19k2P4sWiEVrOrMT1zDFpctWr3R/IdX5dbd3ztChioHsSqTnv/hHThPIjlVubgYVWPs+ZueVBDWXAtoLdtY4CKHkw1sXkY2aGc0y50zpizIDUfbcsdbUiyVZZqknfYeAN5ILHpYIH4xPGW6ZWR51A7LSgQeWdxWbZTksXtlAsgBU6vOaAe01CnYmbBYl52Bu0flQx739xgKkBnDEKGh4qAWembq5rJpoFj0CTgAHnuXirCMi8hJgTkZpmw=
