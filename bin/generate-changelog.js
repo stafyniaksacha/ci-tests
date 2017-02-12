@@ -142,7 +142,7 @@ function getPrInfos(prId, ghRepo, ghToken) {
 }
 
 function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
-  let labels =
+  let labels = {};
   let changelogLabels = {};
   let changelog = '';
 
@@ -168,11 +168,14 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
 
     for (let change of labels[label]) {
 
-      changelogLabels[label] += `- [ #${change.id} ] ${change.title}`;
+      changelogLabels[label] += `- [ (#${change.id})[https://github.com/stafyniaksacha/is-really-primitive/pull/${change.id}] ] ${change.title}`;
 
       if (change.issues.length > 0) {
-        changelogLabels[label] += ` - (resolve #`;
-        changelogLabels[label] += change.issues.join(', resolve #');
+        changelogLabels[label] += ` - (`;
+        for (let issue of change.issues) {
+          changelogLabels[label] += `resolve #${issue})[https://github.com/stafyniaksacha/is-really-primitive/issue/${issue}], `;
+        }
+        changelogLabels[label].slice(-2)
         changelogLabels[label] += `)`;
       }
 
