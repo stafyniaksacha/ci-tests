@@ -10,7 +10,7 @@ PACKAGE_VERSION=$(cat package.json \
   | tr -d '[[:space:]]')
 
 
-git tag | grep "$PACKAGE_VERSION"
+!(git tag | grep "$PACKAGE_VERSION")
 
 GITHUB_REPO="https://${GH_TOKEN:-git}@github.com/${TRAVIS_REPO_SLUG}.git"
 
