@@ -1,10 +1,12 @@
 {
   "name": "is-really-primitive",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "test if a value is a javascript primitive type",
   "author": "Sacha STAFYNIAK",
   "main": "src/index.js",
   "scripts": {
+    "source-tag": "bash -c 'git tag --points-at=$(diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"master\") <(git rev-list --first-parent \"HEAD\") | head -1)'",
+    "tag": "(git tag -d ${npm_package_version} || true) && (git push origin :${npm_package_version} || true) && (git tag -a ${npm_package_version} -m 'Release ${npm_package_version}' && git push --tags)",
     "test": "nyc --reporter=text-summary --reporter=lcov mocha",
     "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov > coverage/lcov.info && codecov"
   },
