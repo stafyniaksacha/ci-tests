@@ -4,7 +4,7 @@ const https = require('https');
 const bluebird = require('bluebird');
 
 const issueRegex = /(resolve[s|d]?|close[s|d]?|fixe?[s|d]?) #([0-9]+)/g;
-const command_fromTag = "bash -c 'git tag --points-at=$(diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"master\") <(git rev-list --first-parent \"HEAD\") | head -1)'";
+const command_fromTag = "bash -c 'git describe --abbrev=0 --tags'";
 
 let
   labelPriority = [
@@ -200,7 +200,10 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
 
 
 getSourceTagFromGit()
-  .then(sourceTag => getPrIdsFromGit(_fromTag || sourceTag, _toTag || 'HEAD'))
+  .then(sourceTag => {
+    _fromTag = _fromTag || sourceTag
+    return getPrIdsFromGit(_fromTag, _toTag || 'HEAD')
+  })
   .then(prIds => {
     let promises = [];
 
@@ -209,7 +212,7 @@ getSourceTagFromGit()
     }
 
     return bluebird.all(promises)
-      .then(changes => generateChangelog(changes, _futureTag, _fromTag || sourceTag, _toTag || 'HEAD', _changelogFile));
+      .then(changes => generateChangelog(changes, _futureTag, _fromTag, _toTag || 'HEAD', _changelogFile));
   })
   .catch(error => {
     console.error(error);
