@@ -22,7 +22,6 @@ script:
 
 before_deploy:
 - node bin/generate-changelog.js --changelog-file CHANGELOG.md --gh-token "$GH_TOKEN" --gh-repo "$TRAVIS_REPO_SLUG"
-- bash bin/generate-tag-release.sh
 deploy:
 - provider: npm
   skip_cleanup: true
@@ -34,3 +33,5 @@ deploy:
     - master
     - "/[0-9]+\\.[0-9]+\\.[0-9]+/"
     node: '6'
+after_deploy:
+- bash bin/generate-tag-release.sh
