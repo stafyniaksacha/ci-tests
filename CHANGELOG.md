@@ -16,6 +16,15 @@
 
 - [ #13 ] Automatisation of tag creation when travis release package
 
+## Release 1.2.1
+### Enhancement
+- [ #17 ] Add changelog file - (resolve #15)
+
+### Continuous integration
+- [ #18 ] Ci automate changelog - (resolve #16)
+
+- [ #13 ] Automatisation of tag creation when travis release package
+
 ## Release 1.1.0
 ### Enhancement
 - [ #11 ] Add ES6 symbol support - (resolve #10)
