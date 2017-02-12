@@ -176,7 +176,7 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
         changelogLabels[label] += `)`;
       }
 
-      changelogLabels[label] += `\n`;
+      changelogLabels[label] += `\n\n`;
     }
   }
 
