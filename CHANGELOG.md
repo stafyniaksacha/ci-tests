@@ -1,5 +1,6 @@
 ## Release 1.2.1
 ## Release 1.2.1
+## Release 1.2.1
 ### Enhancement
 - [ #17 ] Add changelog file - (resolve #15)
 
