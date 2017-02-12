@@ -1,6 +1,6 @@
 {
   "name": "is-really-primitive",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "test if a value is a javascript primitive type",
   "author": "Sacha STAFYNIAK",
   "main": "src/index.js",
