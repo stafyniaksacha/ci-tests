@@ -168,31 +168,31 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
 
     for (let change of labels[label]) {
 
-      changelogLabels[label] += `- [ (#${change.id})[https://github.com/stafyniaksacha/is-really-primitive/pull/${change.id}] ] ${change.title}`;
+      changelogLabels[label] += `- [ [#${change.id}](https://github.com/stafyniaksacha/is-really-primitive/pull/${change.id}) ] ${change.title}`;
 
       if (change.issues.length > 0) {
         changelogLabels[label] += ` - (`;
         for (let issue of change.issues) {
-          changelogLabels[label] += `resolve #${issue})[https://github.com/stafyniaksacha/is-really-primitive/issue/${issue}], `;
+          changelogLabels[label] += `[resolve #${issue}](https://github.com/stafyniaksacha/is-really-primitive/issue/${issue}), `;
         }
-        changelogLabels[label].slice(-2)
+        changelogLabels[label] = changelogLabels[label].substring(0, changelogLabels[label].length - 2)
         changelogLabels[label] += `)`;
       }
 
       changelogLabels[label] += `\n\n`;
     }
-
-    changelogLabels[label] += `---\n\n`;
   }
 
   if (changes.length > 0) {
     changelog += `### Release ${futureTag}\n`
-  }
 
-  for (let label of labelPriority) {
-    if (changelogLabels.hasOwnProperty(label)) {
-      changelog += changelogLabels[label]
+    for (let label of labelPriority) {
+      if (changelogLabels.hasOwnProperty(label)) {
+        changelog += changelogLabels[label]
+      }
     }
+
+    changelogLabels[label] += `---\n\n`;
   }
 
   console.log('changelog version: %s...%s (future tag: %s)', fromTag, toTag, futureTag);
