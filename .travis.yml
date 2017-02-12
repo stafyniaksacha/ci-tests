@@ -22,7 +22,7 @@ script:
 - npm test && npm run coverage
 
 before_deploy:
-- node bin/generate-changelog.js --changelog-file CHANGELOG.md --gh-token "$GH_TOKEN" --gh-token "$TRAVIS_REPO_SLUG"
+- node bin/generate-changelog.js --changelog-file CHANGELOG.md --gh-token "$GH_TOKEN" --gh-repo "$TRAVIS_REPO_SLUG"
 deploy:
 - provider: npm
   skip_cleanup: true
