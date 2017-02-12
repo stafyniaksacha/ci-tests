@@ -192,7 +192,7 @@ function generateChangelog(changes, futureTag, fromTag, toTag, changelogFile) {
       }
     }
 
-    changelogLabels[label] += `---\n\n`;
+    changelog += `---\n\n`;
   }
 
   console.log('changelog version: %s...%s (future tag: %s)', fromTag, toTag, futureTag);
