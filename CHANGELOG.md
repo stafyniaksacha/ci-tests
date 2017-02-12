@@ -9,7 +9,7 @@
 
 ---
 
-## Release 1.1.0
+### Release 1.1.0
 ##### Enhancement
 - [ [#11](https://github.com/stafyniaksacha/is-really-primitive/pull/11) ] Add ES6 symbol support - ([resolve #10](https://github.com/stafyniaksacha/is-really-primitive/issue/11))
 
@@ -18,7 +18,7 @@
 
 ---
 
-## Release 1.0.0
+### Release 1.0.0
 ##### Enhancement
 - [ [#4](https://github.com/stafyniaksacha/is-really-primitive/pull/4) ] Export isPrimitive(value) function - ([resolve #1](https://github.com/stafyniaksacha/is-really-primitive/issue/4))
 
